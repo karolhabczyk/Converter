@@ -1,0 +1,31 @@
+﻿<div class="row">
+    <div class="col-md-offset-1 col-md-10">
+        <h2>Fahrenheit to Celsius</h2>
+        <p>Convert temperature degrees from Fahrenheit to Celsius.</p>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-2">
+                    <input id="fahrenheit-degrees" class="form-control" placeholder="..." ng-model="vm.fahrenheit" />
+                </div>
+                <div class="col-md-1">
+                    <label for="fahrenheit-degrees" class="control-label">&deg;F</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-2">
+                    <a class="btn btn-default" href="" ng-click="vm.fahrenheitToCelsius()">Convert</a>
+                </div>
+            </div>
+
+            <div class="form-group" ng-show="vm.celsius">
+                <div class="col-md-2">
+                    <label class="control-label">{{vm.celsius}}</label>
+                </div>
+                <div class="col-md-1">
+                    <label class="control-label">&deg;C</label>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

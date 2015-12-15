@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>Converter</title>
+    
+    <link rel="stylesheet" href="Content/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="Content/bootstrap-theme.min.css" type="text/css" />
+    <link rel="stylesheet" href="Content/app.css" type="text/css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/2.4.2/math.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="TypeScripts/app/app.js"></script>
+    <script src="TypeScripts/app/settings/temperature.settings.js"></script>
+    <script src="TypeScripts/app/controllers/common.controller.js"></script>
+    <script src="TypeScripts/app/controllers/temperature.controller.js"></script>
+    <script src="TypeScripts/app/services/tempretature.service.js"></script>
+    
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#/" class = "navbar-brand">Converter</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/temperature">Temperature</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+
+        <div ng-view>
+        </div>
+
+        <hr />
+
+        <footer ng-controller="app.common.CommonController as common">
+            <p>&copy; {{common.getCurrentYear()}} Karol Habczyk</p>
+        </footer>
+    </div>
+
+</body>
+</html>
